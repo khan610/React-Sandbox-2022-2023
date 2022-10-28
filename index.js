@@ -1,13 +1,24 @@
-class Hello extends React.Component {
-	render() {
-		return (
-			<div>
-				<h1>Hello there!</h1>
-				<h1>Hello there!</h1>
-				<h1>Hello there!</h1>
-			</div>
-		);
-	}
-}
+// Import the React and ReactDOM libraries
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-ReactDOM.render(<Hello />, document.getElementById('root'));
+// Create a react component
+const App = () => {
+  const buttonText = 'Click me!';
+  const labelText = 'Enter name:';
+
+  return (
+    <div>
+      <label className="label" for="name">
+        {labelText}
+      </label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: 'blue', color: 'white' }}>
+        {buttonText}
+      </button>
+    </div>
+  );
+};
+
+// Take the react component and show it on the screen
+ReactDOM.render(<App />, document.querySelector('#root'));
